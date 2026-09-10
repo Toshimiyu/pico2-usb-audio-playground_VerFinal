@@ -6,6 +6,7 @@ It is modified and verified to run on the **Raspberry Pi Pico 2 (RP2350)** as a 
 ## Overview
 This project turns a Raspberry Pi Pico 2 into a USB-DAC / DDC.  
 It receives audio from a host PC using **USB Audio Class 1.0** and outputs **16â€‘bit PCM stereo** via I2S.
+This standalone VerFinal build is designed specifically for the PicoAudioPack (PCM5100), using its native I2S pin configuration (GPIO9/10/11).
 
 ### Features
 - **Audio Format:** 16-bit PCM Stereo  
@@ -24,6 +25,7 @@ It receives audio from a host PC using **USB Audio Class 1.0** and outputs **16â
 - Raspberry Pi Pico 2 (RP2350)
 - I2S DAC (PicoAudioPack PCM5100, etc.)
 - USB cable
+- This build is specifically tuned for the PicoAudioPack (PCM5100) and uses its standard I2S pin layout (GPIO9/10/11).
 
 ## Build Instructions
 This project uses the **Pico SDK 1.5.x generation audio_i2s implementation**,  
