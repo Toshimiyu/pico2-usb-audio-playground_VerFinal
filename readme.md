@@ -27,9 +27,8 @@ This standalone VerFinal build is designed specifically for the PicoAudioPack (P
 - USB cable
 
 ## Build Instructions
-This project uses the **Pico SDK 2.3.1 generation audio_i2s implementation**,  
-which provides stable MCLK/BCLK/LRCLK generation for 16‑bit stereo output.  
-Pico SDK 2.x is not compatible with this I2S initialization sequence.
+This project uses the Pico SDK 2.3.1 audio_i2s implementation,
+which provides stable MCLK/BCLK/LRCLK generation for 16‑bit stereo output on RP2350.
 
 ### 1. Install Pico SDK (recommended: 2.3.1)
 Set the environment variable:
