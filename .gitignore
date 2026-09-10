@@ -1,0 +1,5 @@
+build/
+.vscode/
+*.elf
+*.uf2
+*.bin
