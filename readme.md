@@ -1,45 +1,35 @@
-# Pico 2 USB Sound Card Playground (Standalone)
+# Pico 2 USB Sound Card Playground (Standalone VerFinal)
 
-This repository contains the original "USB Sound Card" example, extracted from the Raspberry Pi Pico Playground and modified to be a **standalone** project. It is specifically configured and tested for the **RP2350** (Raspberry Pi Pico 2).
+This repository contains a standalone version of the original “USB Sound Card” example extracted from the Raspberry Pi Pico Playground.  
+It is modified and verified to run on the **Raspberry Pi Pico 2 (RP2350)** as a stable **USB → I2S DDC**.
 
 ## Overview
-This project demonstrates how to turn a Raspberry Pi Pico 2 into a USB-DAC. It uses the native Pico SDK audio and USB libraries to receive audio data from a host PC and output it via I2S.
+This project turns a Raspberry Pi Pico 2 into a USB-DAC / DDC.  
+It receives audio from a host PC using **USB Audio Class 1.0** and outputs **16‑bit PCM stereo** via I2S.
 
-- **Core:** RP2350 (Cortex-M33)
-- **Audio Format:** 16-bit PCM Stereo @ 44.1kHz / 48kHz
-- **Output:** I2S (Data: GPIO 18, Clock Base: GPIO 16)
-- **USB Stack:** Pico SDK Native `pico_usb_device`
+### Features
+- **Audio Format:** 16-bit PCM Stereo  
+- **Sample Rates:** 44.1kHz / 48kHz  
+- **USB Class:** USB Audio Class 1.0  
+- **Output:** I2S  
+- **Compatibility:** Windows / macOS / Linux  
+- **Core:** RP2350 (Cortex‑M33)
+
+### I2S Pin Configuration (Pico 2)
+- **DATA:** GPIO 18  
+- **CLOCK BASE:** GPIO 16  
 
 ## Hardware Requirements
-- **Raspberry Pi Pico 2** (RP2350)
-- An I2S DAC (e.g., PCM5102 or similar)
-- USB Cable
+- Raspberry Pi Pico 2 (RP2350)
+- I2S DAC (PCM5102, ES9023, AK4430, etc.)
+- USB cable
 
-## How to Build
-1. Make sure you have the **Pico SDK (version 2.0.0 or higher)** installed and the `PICO_SDK_PATH` environment variable set.
-2. Create a build directory:
-   ```bash
-   mkdir build
-   cd build
+## Build Instructions
+This project uses the **Pico SDK 1.5.x generation audio_i2s implementation**,  
+which provides stable MCLK/BCLK/LRCLK generation for 16‑bit stereo output.  
+Pico SDK 2.x is not compatible with this I2S initialization sequence.
 
-3. Initialize CMake for the RP2350:
-   Bash
-   cmake -DPICO_BOARD=pico2 ..
-   Build the project:
-
-4. Bash
-   make
-
-## Project Structure
-usb_sound_card.c: The main entry point and hardware initialization.
-
-usb_audio.c / .h: Decoupled USB Audio Class (UAC) handling logic.
-
-usb_descriptors.c / .h: USB device and configuration descriptors.
-
-## Notes
-* This is a "Playground" example. It serves as a stable 16-bit baseline before moving towards more advanced implementations (like 32-bit high-res support or alternative USB stacks).
-* Modified 2026 by Simon BEIMEL (with assistance from Gemini, Google AI)
-
-## License
-BSD-3-Clause (consistent with Raspberry Pi Pico SDK examples)
+### 1. Install Pico SDK (recommended: 1.5.1)
+Set the environment variable:
+```bash
+setx PICO_SDK_PATH "C:\path\to\pico-sdk"
