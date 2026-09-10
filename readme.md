@@ -16,12 +16,13 @@ It receives audio from a host PC using **USB Audio Class 1.0** and outputs **16â
 - **Core:** RP2350 (Cortexâ€‘M33)
 
 ### I2S Pin Configuration (Pico 2)
-- **DATA:** GPIO 18  
-- **CLOCK BASE:** GPIO 16  
+- DATA: GPIO 10
+- BCLK: GPIO 9
+- LRCLK: GPIO 11  
 
 ## Hardware Requirements
 - Raspberry Pi Pico 2 (RP2350)
-- I2S DAC (PCM5102, ES9023, AK4430, etc.)
+- I2S DAC (PicoAudioPack PCM5100, etc.)
 - USB cable
 
 ## Build Instructions
