@@ -28,7 +28,7 @@ This standalone VerFinal build is designed specifically for the PicoAudioPack (P
 - This build is specifically tuned for the PicoAudioPack (PCM5100) and uses its standard I2S pin layout (GPIO9/10/11).
 
 ## Build Instructions
-This project uses the **Pico SDK 1.5.x generation audio_i2s implementation**,  
+This project uses the **Pico SDK 2.3.1 generation audio_i2s implementation**,  
 which provides stable MCLK/BCLK/LRCLK generation for 16‑bit stereo output.  
 Pico SDK 2.x is not compatible with this I2S initialization sequence.
 
