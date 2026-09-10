@@ -31,13 +31,13 @@ Pico SDK 2.x is not compatible with this I2S initialization sequence.
 
 ### 1. Install Pico SDK (recommended: 1.5.1)
 Set the environment variable:
-
+```bash
 setx PICO_SDK_PATH "C:\path\to\pico-sdk"
-
+```
 ### 2. Configure and build
 ```bash
 mkdir build
 cd build
 cmake -DPICO_BOARD=pico2 ..
 make
-
+```
