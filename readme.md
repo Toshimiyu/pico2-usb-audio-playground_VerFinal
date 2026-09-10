@@ -25,7 +25,6 @@ This standalone VerFinal build is designed specifically for the PicoAudioPack (P
 - Raspberry Pi Pico 2 (RP2350)
 - I2S DAC (PicoAudioPack PCM5100, etc.)
 - USB cable
-- This build is specifically tuned for the PicoAudioPack (PCM5100) and uses its standard I2S pin layout (GPIO9/10/11).
 
 ## Build Instructions
 This project uses the **Pico SDK 2.3.1 generation audio_i2s implementation**,  
