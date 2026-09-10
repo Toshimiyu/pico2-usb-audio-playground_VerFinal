@@ -30,7 +30,7 @@ This project uses the **Pico SDK 1.5.x generation audio_i2s implementation**,
 which provides stable MCLK/BCLK/LRCLK generation for 16‑bit stereo output.  
 Pico SDK 2.x is not compatible with this I2S initialization sequence.
 
-### 1. Install Pico SDK (recommended: 1.5.1)
+### 1. Install Pico SDK (recommended: 2.3.1)
 Set the environment variable:
 ```bash
 setx PICO_SDK_PATH "C:\path\to\pico-sdk"
